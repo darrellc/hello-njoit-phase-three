@@ -1,0 +1,64 @@
+/* line 2, C:/Users/ODGCARD/Documents/Projects/Ionic/hello-oit/src/pages/home/home.scss */
+page-home ion-img {
+  width: 128px;
+  height: 65px;
+  margin-top: 2em; }
+
+/* line 3, C:/Users/ODGCARD/Documents/Projects/Ionic/hello-oit/src/pages/home/home.scss */
+page-home h4 {
+  margin: .5em 0 0; }
+
+/* line 5, C:/Users/ODGCARD/Documents/Projects/Ionic/hello-oit/src/pages/home/home.scss */
+page-home .item-md.item-block .item-inner {
+  border-bottom-color: #ebebeb; }
+  /* line 7, C:/Users/ODGCARD/Documents/Projects/Ionic/hello-oit/src/pages/home/home.scss */
+  page-home .item-md.item-block .item-inner ion-label {
+    position: relative; }
+    /* line 9, C:/Users/ODGCARD/Documents/Projects/Ionic/hello-oit/src/pages/home/home.scss */
+    page-home .item-md.item-block .item-inner ion-label .month-indicator {
+      width: .2em;
+      position: absolute;
+      background: #cccccc;
+      top: 0;
+      bottom: 0; }
+    /* line 16, C:/Users/ODGCARD/Documents/Projects/Ionic/hello-oit/src/pages/home/home.scss */
+    page-home .item-md.item-block .item-inner ion-label .month-indicator[data-month="January"] {
+      background: #1b4a96; }
+    /* line 17, C:/Users/ODGCARD/Documents/Projects/Ionic/hello-oit/src/pages/home/home.scss */
+    page-home .item-md.item-block .item-inner ion-label .month-indicator[data-month="February"] {
+      background: #8315a8; }
+    /* line 18, C:/Users/ODGCARD/Documents/Projects/Ionic/hello-oit/src/pages/home/home.scss */
+    page-home .item-md.item-block .item-inner ion-label .month-indicator[data-month="March"] {
+      background: #96b4ff; }
+    /* line 19, C:/Users/ODGCARD/Documents/Projects/Ionic/hello-oit/src/pages/home/home.scss */
+    page-home .item-md.item-block .item-inner ion-label .month-indicator[data-month="April"] {
+      background: #ffff7a; }
+    /* line 20, C:/Users/ODGCARD/Documents/Projects/Ionic/hello-oit/src/pages/home/home.scss */
+    page-home .item-md.item-block .item-inner ion-label .month-indicator[data-month="May"] {
+      background: #79ff54; }
+    /* line 21, C:/Users/ODGCARD/Documents/Projects/Ionic/hello-oit/src/pages/home/home.scss */
+    page-home .item-md.item-block .item-inner ion-label .month-indicator[data-month="June"] {
+      background: #ffebb2; }
+    /* line 22, C:/Users/ODGCARD/Documents/Projects/Ionic/hello-oit/src/pages/home/home.scss */
+    page-home .item-md.item-block .item-inner ion-label .month-indicator[data-month="July"] {
+      background: #ff463f; }
+    /* line 23, C:/Users/ODGCARD/Documents/Projects/Ionic/hello-oit/src/pages/home/home.scss */
+    page-home .item-md.item-block .item-inner ion-label .month-indicator[data-month="August"] {
+      background: #ff891c; }
+    /* line 24, C:/Users/ODGCARD/Documents/Projects/Ionic/hello-oit/src/pages/home/home.scss */
+    page-home .item-md.item-block .item-inner ion-label .month-indicator[data-month="September"] {
+      background: #917555; }
+    /* line 25, C:/Users/ODGCARD/Documents/Projects/Ionic/hello-oit/src/pages/home/home.scss */
+    page-home .item-md.item-block .item-inner ion-label .month-indicator[data-month="October"] {
+      background: #ffaa00; }
+    /* line 26, C:/Users/ODGCARD/Documents/Projects/Ionic/hello-oit/src/pages/home/home.scss */
+    page-home .item-md.item-block .item-inner ion-label .month-indicator[data-month="November"] {
+      background: #a87d3e; }
+    /* line 27, C:/Users/ODGCARD/Documents/Projects/Ionic/hello-oit/src/pages/home/home.scss */
+    page-home .item-md.item-block .item-inner ion-label .month-indicator[data-month="December"] {
+      background: #1ebfff; }
+    /* line 28, C:/Users/ODGCARD/Documents/Projects/Ionic/hello-oit/src/pages/home/home.scss */
+    page-home .item-md.item-block .item-inner ion-label ion-col {
+      color: #333333; }
+
+/*# sourceMappingURL=home.css.map */

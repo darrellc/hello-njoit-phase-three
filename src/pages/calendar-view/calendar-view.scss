@@ -1,0 +1,51 @@
+page-calendar-view {
+    ion-col[col-6]{
+        text-align:center;
+    }
+    .calendar-button{
+        button{
+            background: #fff;
+            box-shadow: none;
+            color: inherit;
+            ion-icon[name="arrow-forward"]:before{
+                content: "\f3d1";
+            }
+            ion-icon[name="arrow-back"]:before{
+                content: "\f3cf";
+            }
+        }
+    }
+    .calendar-button.forward{
+        text-align:right;
+    }
+    h5{font-size: 1.1em;margin:0;padding-bottom:2em;margin-top:.75em;text-align:center;font-weight:normal;}
+    table.table{
+        border: none !important;
+        thead th {font-weight: bold;}
+        th, tbody td{
+            border: none !important;
+            font-size: 100%;
+            padding: 0 !important;            
+        }
+        th{text-transform: uppercase;font-weight: normal;padding: .5em 0 !important;}
+        th small{width:10px;margin:0 auto;overflow:hidden;}
+        tbody td{padding: 15px 0 !important;line-height: 1.7em !important;font-size: 75%;position:relative;}
+        tbody td.monthview-selected{background: transparent !important;color:#000 !important;}   
+        tbody td.text-muted{pointer-events: none;opacity: 0 !important;color: #fff !important;}
+        tbody td.monthview-primary-with-event.monthview-holiday{background: none;position:relative;font-weight: bold !important;font-size: 85%;}
+        tbody td.monthview-primary-with-event.monthview-selected.monthview-holiday{color: #ffffff !important;}
+        tbody td.monthview-primary-with-event.monthview-holiday:after{
+            content: "";
+            width: 3em;
+            height: 3em;
+            border-radius: 50%;
+            background: #ff0000;
+            z-index: -1;
+            position:absolute;
+            top:50%;
+            left:50%;
+            transform: translate(-50%,-50%);
+        }
+    }
+    ion-list.event-detail-container{display: none;}
+}

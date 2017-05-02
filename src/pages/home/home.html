@@ -1,0 +1,42 @@
+<ion-header>
+    <ion-navbar>
+        <div id="logo">
+            <img src="assets/images/badge.png" />
+        </div>
+        <ion-title>
+            Hello NJOIT<br /><span class='sub-title'>Welcome Darrell</span>
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <h3>2017 State Holidays</h3>
+    <ion-item-group *ngFor="let month of monthKeys">
+        <ion-item-divider>
+            <ion-label>
+                {{month}}
+            </ion-label>
+        </ion-item-divider>                
+    
+
+        <ion-item *ngFor="let holiday of holidaysToMonths[month]">                
+            <!-- Output disabled button if disabled -->
+            <div attr.data-month="{{month}}">
+                <div ion-item>
+                    <ion-grid>
+                        <ion-row>
+                            <ion-col width-70>
+                                {{ holiday.holiday }}
+                            </ion-col>
+                            <ion-col width-30>
+                                {{ holiday.dateAnno }}
+                            </ion-col> 
+                        </ion-row>
+                    </ion-grid>                    
+                </div>                
+            </div>
+        </ion-item>
+
+    </ion-item-group>
+  
+</ion-content>

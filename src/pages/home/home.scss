@@ -1,0 +1,36 @@
+page-home {      
+    ion-item-group{
+        margin-bottom: 3rem;
+        ion-item-divider.item-divider{
+            border-bottom:none;
+            background: none;
+            .label{font-weight: bold;color: #333;font-size: 16px;margin:0;}
+        }
+        .item{min-height: 1.2rem;}
+        
+        .item.item-block{
+            .item-inner{
+                border-bottom: none;
+                ion-label{
+                    position:relative;
+                    margin:0;
+                    font-size: 12px;
+                    *{border-bottom: none;}
+                    .item{
+                        padding:0;
+                        ion-grid{
+                            padding: 0;
+                            ion-col{
+                                padding:0;
+                                color: #333333;
+                                font-size: 1.2em;
+                            }
+                            ion-col[width-30]{text-align:right;}
+                        }
+                    }
+                }
+            } 
+        }
+    }
+        
+}

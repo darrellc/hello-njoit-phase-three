@@ -1,0 +1,37 @@
+page-calendar {
+
+    h3{margin-top: 1em;margin-bottom: 0;}
+    ion-grid ion-row ion-col{
+        width: 33.3333333333333%;
+        h5{font-size: .8em;margin:0;padding-left: 1em;padding-bottom:0;margin-top: 10%;line-height:0;}
+        table.table{
+            
+            border: none !important;
+            th, tbody td{
+                border: none !important;
+                font-size: 45%;
+                padding: 0 !important;
+                
+            }
+            th{text-transform: uppercase;}
+            tbody td{line-height: 1.7em !important;font-size: 45%;position:relative;}
+            tbody td.monthview-selected{background: transparent !important;color:#000 !important;}   
+            tbody td.text-muted{pointer-events: none;opacity: 0 !important;color: #fff !important;}
+            tbody td.monthview-primary-with-event.monthview-holiday{background: none;position:relative;}
+            tbody td.monthview-primary-with-event.monthview-selected.monthview-holiday{color: #ffffff !important;}
+            tbody td.monthview-primary-with-event.monthview-holiday:after{
+                content: "";
+                width: 1.5em;
+                height: 1.5em;
+                border-radius: 50%;
+                background: #ff0000;
+                z-index: -1;
+                position:absolute;
+                top:0;
+                left:2px;
+            }
+        }
+        ion-list.event-detail-container{display: none;}
+    } 
+
+}

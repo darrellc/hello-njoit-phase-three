@@ -1,0 +1,14 @@
+/* line 17, C:/Users/ODGCARD/Documents/Projects/Ionic/hello-oit/src/app/app.scss */
+.disabled {
+  opacity: .3;
+  pointer-events: none; }
+
+/* line 24, C:/Users/ODGCARD/Documents/Projects/Ionic/hello-oit/src/app/app.scss */
+ion-header .toolbar-background {
+  background: #03A9F4; }
+
+/* line 25, C:/Users/ODGCARD/Documents/Projects/Ionic/hello-oit/src/app/app.scss */
+ion-header .toolbar-title {
+  color: #ffffff; }
+
+/*# sourceMappingURL=app.css.map */

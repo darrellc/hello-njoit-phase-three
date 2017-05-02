@@ -1,0 +1,85 @@
+[
+  {
+     "day":"Monday"
+    ,"date":" January 2nd"
+    ,"dateNum":"2nd"
+    ,"dateAnno":"1/2/2017"
+    ,"holiday":" New Years Day (Observed)"
+  },
+  {
+     "day":"Monday"
+    ,"date":" January 16th"
+    ,"dateNum":"16th"
+    ,"dateAnno":"1/16/2017"
+    ,"holiday":" Martin Luther King Jr. Day"
+  },
+  {
+     "day":"Monday"
+    ,"date":" February 20th"
+    ,"dateNum":"20th"
+    ,"dateAnno":"2/20/2017"
+    ,"holiday":" Presidents' Day"
+  },
+  {
+     "day":"Friday"
+    ,"date":" April 14th"
+    ,"dateNum":"14th"
+    ,"dateAnno":"4/14/2017"
+    ,"holiday":" Good Friday"
+  },
+  {
+     "day":"Monday"
+    ,"date":" May 29th"
+    ,"dateNum":"29th"
+    ,"dateAnno":"5/29/2017"
+    ,"holiday":" Memorial Day"
+  },
+  {
+     "day":"Tuesday"
+    ,"date":" July 4th"
+    ,"dateNum":"4th"
+    ,"dateAnno":"7/4/2017"
+    ,"holiday":" Independence Day"
+  },
+  {
+     "day":"Monday"
+    ,"date":" September 4th"
+    ,"dateNum":"4th"
+    ,"dateAnno":"9/4/2017"
+    ,"holiday":" Labor Day"
+  },
+  {
+     "day":"Monday"
+    ,"date":" October 9th"
+    ,"dateNum":"9th"
+    ,"dateAnno":"10/9/2017"
+    ,"holiday":" Columbus Day"
+  },
+  {
+     "day":"Tuesday"
+    ,"date":" November 7th"
+    ,"dateNum":"7th"
+    ,"dateAnno":"11/7/2017"
+    ,"holiday":" Voting Day"
+  },
+  {
+     "day":"Friday"
+    ,"date":" November 10th"
+    ,"dateNum":"10th"
+    ,"dateAnno":"11/10/2017"
+    ,"holiday":" Veterans Day"
+  },
+  {
+     "day":"Thursday"
+    ,"date":" November 23rd"
+    ,"dateNum":"23rd"
+    ,"dateAnno":"11/23/2017"
+    ,"holiday":" Thanksgiving"
+  },
+  {
+     "day":"Monday"
+    ,"date":" December 25th"
+    ,"dateNum":"25th"
+    ,"dateAnno":"12/25/2017"
+    ,"holiday":" Christmas Day"
+  }]

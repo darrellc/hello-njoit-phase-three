@@ -1,0 +1,47 @@
+//Added to the monthview.js file for the plugin.
+
+MonthViewComponent.prototype.getHighlightClass = function (date) {
+    var className = '';        
+    if (date.hasEvent) {
+        if (date.secondary) {
+            className = 'monthview-secondary-with-event';
+        }
+        else {
+            className = 'monthview-primary-with-event';
+        }
+        console.log(date);
+        //Loop through all the events and add their eventType to the class name.
+        //Custom code. - Darrell - 5/2/17
+        for(var e in date.events){
+            var event = date.events[e];
+            if(event.eventType){
+                className += " " + event.eventType;
+            }
+        }
+    }
+    if (date.selected) {
+        if (className) {
+            className += ' ';
+        }
+        className += 'monthview-selected';
+    }
+    if (date.current) {
+        if (className) {
+            className += ' ';
+        }
+        className += 'monthview-current';
+    }
+    if (date.secondary) {
+        if (className) {
+            className += ' ';
+        }
+        className += 'text-muted';
+    }
+    if (date.disabled) {
+        if (className) {
+            className += ' ';
+        }
+        className += 'monthview-disabled';
+    }
+    return className;
+};
