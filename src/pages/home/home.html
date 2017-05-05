@@ -10,33 +10,64 @@
 </ion-header>
 
 <ion-content>
-    <h3>2017 State Holidays</h3>
-    <ion-item-group *ngFor="let month of monthKeys">
+    <!-- Real floating action button, fixed. It will not scroll with the content -->
+    <ion-fab top right edge>
+        <button ion-fab (click)="presentCheckbox()"><ion-icon name="funnel"></ion-icon></button>        
+    </ion-fab>
+    <h3>2017 Important Dates</h3>
+    <ion-item-group *ngFor="let month of monthNames" attr.data-month="{{month}}" [hidden]="(!monthEvents[month]['holidays'] && !shareService.getShowPayDates() && !shareService.getShowDueDates())">        
         <ion-item-divider>
             <ion-label>
                 {{month}}
             </ion-label>
         </ion-item-divider>                
     
-
-        <ion-item *ngFor="let holiday of holidaysToMonths[month]">                
-            <!-- Output disabled button if disabled -->
-            <div attr.data-month="{{month}}">
-                <div ion-item>
-                    <ion-grid>
-                        <ion-row>
-                            <ion-col width-70>
-                                {{ holiday.holiday }}
-                            </ion-col>
-                            <ion-col width-30>
-                                {{ holiday.dateAnno }}
-                            </ion-col> 
-                        </ion-row>
-                    </ion-grid>                    
-                </div>                
-            </div>
-        </ion-item>
-
+        <!-- holidays -->
+        <div class="events-holidays">
+            <ion-item *ngFor="let event of monthEvents[month]['holidays']">    
+                <ion-grid>
+                    <ion-row>
+                        <ion-col width-70>
+                            {{ event.title }}
+                        </ion-col>
+                        <ion-col width-30>
+                            {{ event.dateAnno }}
+                        </ion-col> 
+                    </ion-row>
+                </ion-grid>                    
+            </ion-item>
+        </div>
+        <!-- Pay Dates -->
+        <div class="events-pay-dates" [hidden]="!shareService.getShowPayDates()">
+            <ion-item *ngFor="let event of monthEvents[month]['pay-dates']">    
+                <ion-grid>
+                    <ion-row>
+                        <ion-col width-70>
+                            {{ event.title }}
+                        </ion-col>
+                        <ion-col width-30>
+                            {{ event.dateAnno }}
+                        </ion-col> 
+                    </ion-row>
+                </ion-grid>                    
+            </ion-item>
+        </div>
+        <!-- Due Dates -->
+        <div class="events-due-dates" [hidden]="!shareService.getShowDueDates()">
+            <ion-item *ngFor="let event of monthEvents[month]['due-dates']">    
+                <ion-grid>
+                    <ion-row>
+                        <ion-col width-70>
+                            {{ event.title }}
+                        </ion-col>
+                        <ion-col width-30>
+                            {{ event.dateAnno }}
+                        </ion-col> 
+                    </ion-row>
+                </ion-grid>                    
+            </ion-item>
+        </div>
+        <div class="divider" [hidden]="(!shareService.getShowPayDates() && !shareService.getShowDueDates())"></div>
     </ion-item-group>
   
 </ion-content>

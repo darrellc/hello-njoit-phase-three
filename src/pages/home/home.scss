@@ -1,5 +1,13 @@
-page-home {      
+page-home { 
+    .events-pay-dates, .events-due-dates{margin: 1em 0;}
+    .events-holidays{margin-bottom: 1em;}
+    .events-pay-dates{
+        padding-top: .7em;padding-bottom:.7em;
+        background: #f7f7f7;
+        ion-item{background: transparent;}
+    } 
     ion-item-group{
+        .divider{padding-bottom: 1.5rem;border-bottom: 1px solid #ccc;width: 90%;margin: auto;}        
         margin-bottom: 3rem;
         ion-item-divider.item-divider{
             border-bottom:none;
@@ -14,20 +22,18 @@ page-home {
                 ion-label{
                     position:relative;
                     margin:0;
-                    font-size: 12px;
-                    *{border-bottom: none;}
-                    .item{
-                        padding:0;
-                        ion-grid{
-                            padding: 0;
-                            ion-col{
-                                padding:0;
-                                color: #333333;
-                                font-size: 1.2em;
-                            }
-                            ion-col[width-30]{text-align:right;}
+                    font-size: 12px;                    
+                    *{border-bottom: none;}                    
+                    ion-grid{
+                        padding: 0;
+                        ion-col{
+                            padding:0;
+                            color: #333333;
+                            font-size: 1.2em;
                         }
+                        ion-col[width-30]{text-align:right;}
                     }
+                    
                 }
             } 
         }

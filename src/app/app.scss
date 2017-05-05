@@ -37,7 +37,65 @@ ion-header{
     button.back-button{color: #fff;}   
 }
 
+ion-alert{
+    .alert-wrapper{
+        .alert-head{display: none;}
+        .alert-message{padding: 16px;overflow:hidden;color: inherit;}
+        .alert-checkbox-group{
+            border: none;
+            padding: 0 16px;
+            button.alert-checkbox{
+                position:relative;
+                .alert-checkbox-icon{
+                    position:absolute;
+                    top:0;
+                    right: 0;
+                    left: inherit;
+                    margin: 13px 10px;
+                }
+                .alert-checkbox-label{
+                    padding-left: 3em;
+                }                
+            }
+            button:nth-child(1):before{
+                content: "";
+                position:absolute;
+                width:1em;
+                height:1em;
+                border-radius: 50%;
+                top:13px;
+                left: .5em;
+                background: #808080;
+            }
+            button:nth-child(2):before{
+                content: "";
+                position:absolute;
+                width:1em;
+                height:1em;
+                top:13px;
+                left: .5em;
+                background: #000;
+            }
+            button:nth-child(3):before{
+                content: "";
+                position:absolute;
+                width:1em;
+                height:1em;
+                top:13px;
+                left: .5em;
+                background: #ccc;
+            }
+        }
+
+    }
+    
+}
+
 ion-content{
+    ion-fab[top][edge]{top: -31px;}
+    ion-fab[right]{right: 16px;}
+    ion-fab button[ion-fab].fab{box-shadow: none !important;}
+
     .overlay{
         position:fixed;
         top:0;

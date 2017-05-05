@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 
 import { ShareService } from '../services/ShareService';
-import { HelperMethods } from '../services/HelperMethods';
 
 import { CalendarViewPage } from '../calendar-view/calendar-view';
 
@@ -42,10 +41,7 @@ export class CalendarPage {
         //Create an array of Rows for the calendar
         var calendarRow = [];    
         //Get the holidays array of objects in the ShareService.
-        var holidays = this.shareService.getHolidays();
         for(let month of this.shareService.getMonthNames()){ 
-            //Create events array.
-            var events = []; 
             //Get the index of the month name in the array.  To create the correct month calendar.
             var monthIdx = this.shareService.getMonthNames().indexOf(month);
             //Create a UTC start date of the 1st of every month in the current year

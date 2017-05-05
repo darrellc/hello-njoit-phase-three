@@ -1,0 +1,47 @@
+<!--
+  Generated template for the CalendarView page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+    <ion-navbar>
+        <div id="logo">
+            <img src="assets/images/badge.png" />
+        </div>
+        <ion-title>
+            Hello NJOIT<br /><span class='sub-title'>Welcome Darrell</span>
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+  <h3>2017 State Holidays</h3>
+
+  <ion-grid>
+      <ion-row>
+            <ion-col col-3 class="calendar-button back">
+                <button ion-button icon-only (click)="changeMonth('back')">
+                    <ion-icon name="arrow-back"></ion-icon>
+                </button>
+            </ion-col>
+            <ion-col col-6>
+                <h5>{{ calendar.monthName }}</h5>
+            </ion-col>
+            <ion-col col-3 class="calendar-button forward">
+                <button ion-button icon-only (click)="changeMonth('forward')">
+                    <ion-icon name="arrow-forward"></ion-icon>
+                </button>
+            </ion-col>
+      </ion-row>
+  </ion-grid>
+  <calendar 
+    [eventSource]="calendar.events" 
+    [calendarMode]="calendar.mode" 
+    [currentDate]="calendar.currentDate" 
+    (onCurrentDateChanged)="onCurrentDateChanged($event)"  
+    (onRangeChanged)="onRangeChanged()"
+    step="30" 
+    formatDayHeader="E"></calendar>
+</ion-content>

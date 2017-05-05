@@ -3,22 +3,53 @@
 
 export class ShareService{
      
-    holidays: any[];
+    dates: any[];
     monthNames: any[];
 
+    showHolidays: boolean;
+    showPayDates: boolean;
+    showDueDates: boolean;
+    
     constructor(){
-        this.holidays = [];
+        this.dates = [];
         this.monthNames = ["January", "February", "March", "April", "May",
                            "June", "July", "August", "September", "October",
                            "November", "December"];
+        this.showHolidays = true;
+        this.showPayDates = false;
+        this.showDueDates = false;
     }
     //Assign the holidays array of objects to the value of holidays;
-    setHolidays(holidays){
-        this.holidays = holidays;
+    setDates(dates){
+        this.dates = dates;
     }
+    //Assign showHolidays to either true or false;
+    setShowHolidays(showHolidays){
+        this.showHolidays = showHolidays
+    }
+    //Assign showHolidays to either true or false;
+    setShowPayDates(showPayDates){
+        this.showHolidays = showPayDates;
+    }
+    //Assign showHolidays to either true or false;
+    setShowDueDates(showDueDates){
+        this.showHolidays = showDueDates;
+    }
+    //Return showHolidays boolean;
+    getShowHolidays(){
+        return this.showHolidays;
+    }    
+    //Return showPayDates boolean;
+    getShowPayDates(){
+        return this.showPayDates;
+    }    
+    //Return showDueDates boolean;
+    getShowDueDates(){
+        return this.showDueDates;
+    }    
     //Return the holidays array of objects;
     getHolidays(){
-        return this.holidays;
+        return this.dates;
     }
     //Return the monthNames array;
     getMonthNames(){
@@ -29,8 +60,8 @@ export class ShareService{
         return (this.monthNames[idx]) ? this.monthNames[idx] : "Not Found";
     }
 
-    getHolidaysPerMonth(month){
-        return (this.holidays[month]) ? this.holidays[month] : [];
+    getDatesPerMonth(month){
+        return (this.dates[month]) ? this.dates[month] : [];
     }
 
     getEvents(monthName, idx){
@@ -38,9 +69,9 @@ export class ShareService{
         //Get the holidays
         events = events.concat(this.getHolidayItems(monthName, idx));
         //Get the pay dates
-        events = events.concat(this.getPayDates());
+        events = events.concat(this.getPayDates(monthName, idx));
         //Get the due dates
-        events = events.concat(this.getDueDates());
+        events = events.concat(this.getDueDates(monthName, idx));
 
         console.log("EVENTS: ", events);
         return events;
@@ -49,7 +80,7 @@ export class ShareService{
     //monthName is the name of the month to get the holidays.
     getHolidayItems(monthName, idx){
         var events = [];
-        var holidays = this.getHolidaysPerMonth(monthName);
+        var holidays = this.getDatesPerMonth(monthName);
         //Get the events for the given month
         if(holidays.length > 0){
             //Loop through each holiday in the holidays array
@@ -76,13 +107,16 @@ export class ShareService{
         return events;
     }
 
-    getPayDates(){
+    getPayDates(monthName, idx){
         var events = [];
+        var startDate = new Date(new Date().getFullYear(), 1, 12);
+        console.log(startDate);
+
 
         return events;
     }
 
-    getDueDates(){
+    getDueDates(monthName, idx){
         var events = [];
 
         return events;
