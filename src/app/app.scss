@@ -14,6 +14,8 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+@import 'colors';
+
 .disabled{
     opacity: .3;
     pointer-events: none;
@@ -22,20 +24,36 @@
 h3{padding: 0 1em;font-size: 1.2em;margin-bottom: 2em;margin-top:2em;}  
 
 ion-header{
-    #logo{float:left;width: 2.25em;height:2.25em;}
+    #logo{float:left;width: 3.5em;height:3.5em;}
 
-    .toolbar-background{background: #004ffe;}
+    .toolbar-background{background: $lightPurple;}
     .toolbar-title{
+        padding-top: .3em;
         color: #ffffff;
         line-height:.9em;
+        color: $darkPurple;
+        font-weight:bold;
         .sub-title{
             font-weight: normal;
             color: #ebebeb;
-            font-size: .8em;
+            font-size: .7em;
+            font-style: italic;
+            color: $darkPurple;
         }
     }
     button.back-button{color: #fff;}   
 }
+
+/*Tabs*/
+ion-tabs a.tab-button{
+    color: #333 !important;
+    ion-icon{color: #333 !important;}
+    opacity: .3;
+}
+ion-tabs a.tab-button[aria-selected="true"]{    
+    opacity: 1;
+}
+
 
 ion-alert{
     .alert-wrapper{
@@ -91,10 +109,16 @@ ion-alert{
     
 }
 
-ion-content{
+ion-content{    
     ion-fab[top][edge]{top: -31px;}
     ion-fab[right]{right: 16px;}
-    ion-fab button[ion-fab].fab{box-shadow: none !important;}
+    ion-fab button[ion-fab].fab{
+        box-shadow: none !important;
+        background: #fff;
+        color: $darkPurple;
+        border: 2px solid $darkPurple;
+        ion-icon{font-size: 3rem;}
+    }
 
     .overlay{
         position:fixed;

@@ -1,7 +1,7 @@
 <ion-header>
     <ion-navbar>
         <div id="logo">
-            <img src="assets/images/badge.png" />
+            <img src="assets/images/njoit-logo.png" />
         </div>
         <ion-title>
             Hello NJOIT<br /><span class='sub-title'>Welcome Darrell</span>
@@ -15,16 +15,16 @@
         <button ion-fab (click)="presentCheckbox()"><ion-icon name="funnel"></ion-icon></button>        
     </ion-fab>
     <h3>2017 Important Dates</h3>
-    <ion-item-group *ngFor="let month of monthNames" attr.data-month="{{month}}" [hidden]="(!monthEvents[month]['holidays'] && !shareService.getShowPayDates() && !shareService.getShowDueDates())">        
-        <ion-item-divider>
+    <ion-item-group *ngFor="let month of monthNames" attr.data-month="{{month}}" [hidden]= "!sService.getShow('show-holidays') && !sService.getShow('show-pay') && !sService.getShow('show-due')">       
+        <ion-item-divider [hidden]="(!monthEvents[month]['holidays'] && !sService.getShow('show-pay') && !sService.getShow('show-due'))">
             <ion-label>
                 {{month}}
             </ion-label>
-        </ion-item-divider>                
+        </ion-item-divider>
     
         <!-- holidays -->
-        <div class="events-holidays">
-            <ion-item *ngFor="let event of monthEvents[month]['holidays']">    
+        <div class="events-holidays" [hidden]="!sService.getShow('show-holidays')" *ngIf="sService.getMonthEventsByType(month, 'holidays')" >
+            <ion-item *ngFor="let event of monthEvents[month]['holidays']">
                 <ion-grid>
                     <ion-row>
                         <ion-col width-70>
@@ -38,7 +38,7 @@
             </ion-item>
         </div>
         <!-- Pay Dates -->
-        <div class="events-pay-dates" [hidden]="!shareService.getShowPayDates()">
+        <div class="events-pay-dates" [hidden]="!sService.getShow('show-pay')">
             <ion-item *ngFor="let event of monthEvents[month]['pay-dates']">    
                 <ion-grid>
                     <ion-row>
@@ -53,8 +53,8 @@
             </ion-item>
         </div>
         <!-- Due Dates -->
-        <div class="events-due-dates" [hidden]="!shareService.getShowDueDates()">
-            <ion-item *ngFor="let event of monthEvents[month]['due-dates']">    
+        <div class="events-due-dates" [hidden]="!sService.getShow('show-due')">
+            <ion-item *ngFor="let event of monthEvents[month]['due-dates']">
                 <ion-grid>
                     <ion-row>
                         <ion-col width-70>
@@ -67,7 +67,7 @@
                 </ion-grid>                    
             </ion-item>
         </div>
-        <div class="divider" [hidden]="(!shareService.getShowPayDates() && !shareService.getShowDueDates())"></div>
+        <div class="divider" [hidden]="(!sService.getShow('show-pay') && !sService.getShow('show-due'))"></div>
     </ion-item-group>
   
 </ion-content>

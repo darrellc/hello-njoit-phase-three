@@ -1,15 +1,15 @@
 import { Component } from '@angular/core';
-import { Platform } from 'ionic-angular';
+import { Platform, LoadingController } from 'ionic-angular';
 import { StatusBar, Splashscreen } from 'ionic-native';
 
 import { TabsPage } from '../pages/tabs/tabs';
 
 import { ShareService } from '../pages/services/ShareService';
-
+import { HelperMethods } from '../pages/services/HelperMethods';
 
 @Component({
   templateUrl: 'app.html',
-  providers: [ShareService]
+  providers: [ShareService, HelperMethods]
 })
 export class MyApp {
   rootPage = TabsPage;

@@ -72,6 +72,6 @@ export class CalendarViewPage {
         console.log("onCurrentDateChanged triggered");
 
         //Get the currentMonth name and idx        
-        this.calendar.events = this.shareService.getEvents(this.calendar.monthName, this.currentMonth);
+        //this.calendar.events = this.shareService.getEvents(this.calendar.monthName, this.currentMonth);
     }
 }

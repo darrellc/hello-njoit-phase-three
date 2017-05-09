@@ -1,4 +1,10 @@
-page-home { 
+$darkPurple: #591e82;
+
+page-home {
+    .scroll-content{
+        
+    } 
+    h3{margin-top: 1.3em;margin-bottom: 1em;font-size: 1.3em;color: $darkPurple;font-weight:bold;}
     .events-pay-dates, .events-due-dates{margin: 1em 0;}
     .events-holidays{margin-bottom: 1em;}
     .events-pay-dates{
@@ -12,7 +18,7 @@ page-home {
         ion-item-divider.item-divider{
             border-bottom:none;
             background: none;
-            .label{font-weight: bold;color: #333;font-size: 16px;margin:0;}
+            .label{font-weight: bold;color: #333;font-size: 1.3em;margin:0;text-transform: capitalize;color:$darkPurple;}
         }
         .item{min-height: 1.2rem;}
         
@@ -23,6 +29,7 @@ page-home {
                     position:relative;
                     margin:0;
                     font-size: 12px;                    
+                    
                     *{border-bottom: none;}                    
                     ion-grid{
                         padding: 0;
