@@ -1,17 +1,28 @@
 $darkPurple: #591e82;
 
 page-home {
-    .scroll-content{
-        
-    } 
     h3{margin-top: 1.3em;margin-bottom: 1em;font-size: 1.3em;color: $darkPurple;font-weight:bold;}
     .events-pay-dates, .events-due-dates{margin: 1em 0;}
-    .events-holidays{margin-bottom: 1em;}
+    .events-holidays{
+        margin-bottom: 1em;
+        ion-col{
+            color: $holidays !important;
+        }
+    }
     .events-pay-dates{
         padding-top: .7em;padding-bottom:.7em;
-        background: #f7f7f7;
-        ion-item{background: transparent;}
+        background: rgba(230,231,232, .5);
+        ion-item{background: transparent;
+            ion-col{
+                color: $pays !important;
+            }
+        }
     } 
+    .events-due-dates{
+        ion-col{
+            color: $dues !important;
+        }
+    }
     ion-item-group{
         .divider{padding-bottom: 1.5rem;border-bottom: 1px solid #ccc;width: 90%;margin: auto;}        
         margin-bottom: 3rem;

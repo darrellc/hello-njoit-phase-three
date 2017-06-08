@@ -1,5 +1,4 @@
 import { Injectable } from "@angular/core";
-import { NavController, AlertController } from 'ionic-angular';
 import { ShareService } from '../services/ShareService';
 
 import { Http, Headers } from '@angular/http';
