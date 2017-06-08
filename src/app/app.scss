@@ -20,6 +20,11 @@
     opacity: .3;
     pointer-events: none;
 }
+.item-md{background: transparent;}
+
+.ion-page .scroll-content{
+    background: url('../assets/images/OITSeal_xhdpi.png') no-repeat fixed center;
+}
 
 .ion-page .scroll-content{
     background: url('../assets/images/OITSeal_xhdpi.png') no-repeat fixed center;
@@ -49,6 +54,9 @@ ion-header{
 }
 
 /*Tabs*/
+ion-tabs.tabs .tabbar.show-tabbar {
+    background: $lightPurple;
+}
 ion-tabs a.tab-button{
     color: #333 !important;
     ion-icon{color: #333 !important;}

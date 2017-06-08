@@ -9,26 +9,14 @@ page-home {
     }
     .events-pay-dates{
         padding-top: .7em;padding-bottom:.7em;
-<<<<<<< HEAD
         background: $grayRow;
         ion-item{background: transparent;}        
         *{color: $pays !important;}
     }
     .events-due-dates{
         *{color: $dues !important;}
-=======
         background: rgba(230,231,232, .5);
-        ion-item{background: transparent;
-            ion-col{
-                color: $pays !important;
-            }
-        }
->>>>>>> 3da0b95ec81e7c1d4a504cb578e6c59d5c516c21
-    } 
-    .events-due-dates{
-        ion-col{
-            color: $dues !important;
-        }
+        ion-item{background: transparent;}
     }
     ion-item-group{
         .divider{padding-bottom: 1.5rem;border-bottom: 1px solid $divider;width: 90%;margin: auto;}        
