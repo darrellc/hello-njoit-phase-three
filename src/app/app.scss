@@ -21,6 +21,10 @@
     pointer-events: none;
 }
 
+.ion-page .scroll-content{
+    background: url('../assets/images/OITSeal_xhdpi.png') no-repeat fixed center;
+}
+
 h3{padding: 0 1em;font-size: 1.2em;margin-bottom: 2em;margin-top:2em;}  
 
 ion-header{
@@ -41,7 +45,7 @@ ion-header{
             color: $darkPurple;
         }
     }
-    button.back-button{color: #fff;}   
+    button.back-button{display: none;color: $darkPurple !important;} 
 }
 
 /*Tabs*/
@@ -53,6 +57,8 @@ ion-tabs a.tab-button{
 ion-tabs a.tab-button[aria-selected="true"]{    
     opacity: 1;
 }
+
+ion-tabs .tabbar{background: $lightPurple !important;}
 
 
 ion-alert{
@@ -70,42 +76,48 @@ ion-alert{
                     right: 0;
                     left: inherit;
                     margin: 13px 10px;
+                    border-color: #787878;
+                    background-color: #787878;
                 }
                 .alert-checkbox-label{
                     padding-left: 3em;
                 }                
             }
+            button:nth-child(1) .alert-checkbox-label{color: $holidays;}
             button:nth-child(1):before{
                 content: "";
                 position:absolute;
                 width:1em;
                 height:1em;
                 border-radius: 50%;
-                top:13px;
+                top:16px;
                 left: .5em;
-                background: #808080;
+                background: $holidays;
             }
+            button:nth-child(2) .alert-checkbox-label{color: $pays;}
             button:nth-child(2):before{
                 content: "";
                 position:absolute;
                 width:1em;
                 height:1em;
-                top:13px;
+                top:16px;
                 left: .5em;
-                background: #000;
+                background: $pays;
             }
+            button:nth-child(3) .alert-checkbox-label{color: $dues;}
             button:nth-child(3):before{
                 content: "";
                 position:absolute;
                 width:1em;
                 height:1em;
-                top:13px;
+                top:16px;
                 left: .5em;
-                background: #ccc;
+                background: $dues;
             }
         }
 
     }
+    button.alert-button{color: $darkPurple !important;}
     
 }
 
@@ -144,5 +156,6 @@ ion-content{
     }
 }
 
+.loading-wrapper .loading-spinner .spinner circle{stroke: $darkPurple;}
 
 

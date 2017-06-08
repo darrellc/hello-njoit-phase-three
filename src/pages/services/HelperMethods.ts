@@ -1,5 +1,4 @@
 import { Injectable } from "@angular/core";
-import { NavController, AlertController } from 'ionic-angular';
 import { ShareService } from '../services/ShareService';
 
 import { Http, Headers } from '@angular/http';
@@ -59,30 +58,6 @@ export class HelperMethods{
 
                 var holidays = res;                
                 
-                //1st Date 1/5/2017
-                var currentEvent = {
-                    date: new Date(new Date().getFullYear(), 0, 5),
-                    type: "due-dates"
-                }
-
-                while(1){
-                    //Exit the while loop if the year has changed
-                    if(currentEvent.date.getFullYear() !== new Date().getFullYear()){
-                        break;
-                    }else{
-
-                        //Recursively call a function that flip flops 
-                        //between pay date and due date every 7 days.
-
-                        this.createEvent(currentEvent);    
-                        currentEvent.date = new Date(currentEvent.date.setDate(currentEvent.date.getDate() + 7));                    
-                        if(currentEvent.type === "due-dates"){
-                            currentEvent.type = "pay-dates";
-                        }else{
-                            currentEvent.type = "due-dates";
-                        }                        
-                    }
-                }
                 for (let h of holidays){
                     
                     var m = h.date.split(" ")[1];
@@ -101,6 +76,30 @@ export class HelperMethods{
                     });
 
                 }
+
+                //1st Date 1/6/2017
+                var currentEvent = {
+                    date: new Date(new Date().getFullYear(), 0, 6),
+                    type: "due-dates"
+                }
+
+                while(1){
+                    //Exit the while loop if the year has changed
+                    if(currentEvent.date.getFullYear() !== new Date().getFullYear()){
+                        break;
+                    }else{
+
+                        //Recursively call a function that flip flops 
+                        //between pay date and due date every 7 days.
+                        this.createEvent(currentEvent);    
+                        currentEvent.date = new Date(currentEvent.date.setDate(currentEvent.date.getDate() + 7));                    
+                        if(currentEvent.type === "due-dates"){
+                            currentEvent.type = "pay-dates";
+                        }else{
+                            currentEvent.type = "due-dates";
+                        }                        
+                    }
+                }                
             }
                         
         );
@@ -115,6 +114,22 @@ export class HelperMethods{
         };
         //DUE DATE
         //Get the sTime of the due date
+        if(event.type !== "holidays"){
+            //Check if this event falls on a holiday.
+            //First get all the holidays.
+            var h = this.sService.getMonthEventsByType(month.name, "holidays");
+            if(h){                
+                for(var i=0;i<h.length;i++){
+                    //Get the day of the holiday must add one for zero padding
+                    var holidayDay = h[i].startTime.getDate()+1;
+                    if(holidayDay === day){
+                        console.log("We have a holiday and current event date fall on the same day.");
+                        day = day - 1;
+                    }
+                }
+            }
+        }
+
         var sTime = new Date(Date.UTC(event.date.getFullYear(),month.num,day));
         var eTime = new Date(Date.UTC(event.date.getFullYear(),month.num, day+1));                    
 

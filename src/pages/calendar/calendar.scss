@@ -1,37 +1,52 @@
 page-calendar {
-
-    h3{margin-top: 1em;margin-bottom: 0;}
+    h3{margin-top: 1em;margin-bottom: 0;}        
     ion-grid ion-row ion-col{
         width: 33.3333333333333%;
+        
+
+        calendar ion-slides{pointer-events: none;}
         h5{font-size: .8em;margin:0;padding-left: 1em;padding-bottom:0;margin-top: 10%;line-height:0;text-transform: capitalize;}
         table.table{
-            
-            border: none !important;
+            touch-action: none;
+            border: none !important;            
             th, tbody td{
                 border: none !important;
-                font-size: 45%;
+                font-size: 7px;
                 padding: 0 !important;
-                
+                white-space:no-wrap;
+                overflow:hidden;                
+                height: 1vh; 
+                vertical-align: middle !important;                               
             }
-            th{text-transform: uppercase;}
-            tbody td{line-height: 1.7em !important;font-size: 45%;position:relative;}
+            th{text-transform: uppercase;padding-top:3px !important;font-size: 8px;white-space: nowrap;}
+            tbody td{line-height: 2em !important;font-size: 45%;position:relative;}
             tbody td.monthview-selected{background: transparent !important;color:#000 !important;}   
             tbody td.text-muted{pointer-events: none;opacity: 0 !important;color: #fff !important;}
-            tbody td.monthview-primary-with-event.monthview-holiday{background: none;position:relative;}
-            tbody td.monthview-primary-with-event.monthview-selected.monthview-holiday{color: #ffffff !important;}
-            tbody td.monthview-primary-with-event.monthview-holiday:after{
+            tbody td.monthview-primary-with-event{font-weight:bold;background: none;position:relative;}            
+            tbody td.monthview-primary-with-event.monthview-selected{color: #ffffff !important;}
+            tbody td.monthview-primary-with-event:after{
                 content: "";
-                width: 1.5em;
-                height: 1.5em;
-                border-radius: 50%;
-                background: #ff0000;
+                width: 1.8em;
+                height: 1.8em;
                 z-index: -1;
                 position:absolute;
-                top:0;
-                left:2px;
+                top:50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+            tbody td.monthview-primary-with-event.monthview-holiday:after{
+                border-radius: 50%;
+                background: $holidays;                
+            }
+            tbody td.monthview-primary-with-event.monthview-pay-date{
+                background: $pays;
+            }
+            tbody td.monthview-primary-with-event.monthview-due-date{
+                background: $dues;
             }
         }
         ion-list.event-detail-container{display: none;}
     } 
 
 }
+

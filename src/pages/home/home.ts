@@ -20,7 +20,7 @@ export class HomePage {
 
     constructor(public navCtrl: NavController, public http: Http, public sService: ShareService, public alertCtrl: AlertController, public helper: HelperMethods, public loadingCtrl: LoadingController) {
         //Create events list
-        this.helper.getEvents();        
+        this.helper.getEvents();
 
         this.sService.updateScreen.subscribe(data => {
             this.showEvents(data);

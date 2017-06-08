@@ -18,7 +18,7 @@ page-calendar-view {
     .calendar-button.forward{
         text-align:right;
     }
-    h5{font-size: 1.1em;margin:0;padding-bottom:2em;margin-top:.75em;text-align:center;font-weight:normal;}
+    h5{font-size: 1.1em;margin:0;padding-bottom:2em;margin-top:.75em;text-align:center;font-weight:normal;text-transform: capitalize;}
     table.table{
         border: none !important;
         thead th {font-weight: bold;}
@@ -32,19 +32,27 @@ page-calendar-view {
         tbody td{padding: 15px 0 !important;line-height: 1.7em !important;font-size: 75%;position:relative;}
         tbody td.monthview-selected{background: transparent !important;color:#000 !important;}   
         tbody td.text-muted{pointer-events: none;opacity: 0 !important;color: #fff !important;}
-        tbody td.monthview-primary-with-event.monthview-holiday{background: none;position:relative;font-weight: bold !important;font-size: 85%;}
-        tbody td.monthview-primary-with-event.monthview-selected.monthview-holiday{color: #ffffff !important;}
-        tbody td.monthview-primary-with-event.monthview-holiday:after{
+        tbody td.monthview-primary-with-event{font-weight:bold;background: none;position:relative;}            
+        tbody td.monthview-primary-with-event.monthview-selected{color: #ffffff !important;}
+        tbody td.monthview-primary-with-event:after{
             content: "";
-            width: 3em;
-            height: 3em;
-            border-radius: 50%;
-            background: #ff0000;
+            width: 4em;
+            height: 4em;
             z-index: -1;
             position:absolute;
             top:50%;
-            left:50%;
-            transform: translate(-50%,-50%);
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        tbody td.monthview-primary-with-event.monthview-holiday:after{
+            border-radius: 50%;
+            background: $holidays;                
+        }
+        tbody td.monthview-primary-with-event.monthview-pay-date{
+            background: $pays;
+        }
+        tbody td.monthview-primary-with-event.monthview-due-date{
+            background: $dues;
         }
     }
     ion-list.event-detail-container{display: none;}

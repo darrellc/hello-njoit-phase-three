@@ -7,7 +7,7 @@
 <ion-header>
     <ion-navbar>
         <div id="logo">
-            <img src="assets/images/badge.png" />
+            <img src="assets/images/njoit-logo.png" />
         </div>
         <ion-title>
             Hello NJOIT<br /><span class='sub-title'>Welcome Darrell</span>
@@ -30,7 +30,7 @@
         <ion-row *ngFor="let cr of calendars">
             <ion-col *ngFor="let cal of cr" (click)="openCal(cal)">
                 <h5>{{ cal.monthName }}</h5>
-                <calendar [eventSource]="cal.events" [calendarMode]="cal.mode" [currentDate]="cal.currentDate" step="30"></calendar>
+                <calendar [eventSource]="cal.events" [calendarMode]="cal.mode" [currentDate]="cal.currentDate" step="30" formatDayHeader="E"></calendar>
             </ion-col>
         </ion-row>
     </ion-grid>
