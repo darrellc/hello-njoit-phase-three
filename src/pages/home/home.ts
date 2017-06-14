@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, AlertController, LoadingController } from 'ionic-angular';
-import { Http, Headers } from '@angular/http';
+import { Http } from '@angular/http';
 import { ShareService } from '../services/ShareService';
 import { HelperMethods } from '../services/HelperMethods';
 
@@ -52,6 +52,10 @@ export class HomePage {
 
     showLoader(){
         this.loading.present();
+    }
+
+    dismissLoading(){
+        this.loading.dismiss();        
     }
 
 }

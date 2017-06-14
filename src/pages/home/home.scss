@@ -9,13 +9,12 @@ page-home {
     }
     .events-pay-dates{
         padding-top: .7em;padding-bottom:.7em;
-        background: $grayRow;
+        background: rgba(230,231,232, .5);
         ion-item{background: transparent;}        
         *{color: $pays !important;}
     }
     .events-due-dates{
-        *{color: $dues !important;}
-        background: rgba(230,231,232, .5);
+        *{color: $dues !important;}        
         ion-item{background: transparent;}
     }
     ion-item-group{
