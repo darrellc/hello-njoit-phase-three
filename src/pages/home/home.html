@@ -12,7 +12,7 @@
 <ion-content>
     <!-- Real floating action button, fixed. It will not scroll with the content -->
     <ion-fab top right edge>
-        <button ion-fab (click)="presentCheckbox()"><ion-icon name="funnel"></ion-icon></button>        
+        <button ion-fab (tap)="presentCheckbox()"><ion-icon name="funnel"></ion-icon></button>        
     </ion-fab>
     <h3>2017 Important Dates</h3>
     <ion-item-group *ngFor="let month of monthNames" attr.data-month="{{month}}" [hidden]= "!sService.getShow('show-holidays') && !sService.getShow('show-pay') && !sService.getShow('show-due')">       

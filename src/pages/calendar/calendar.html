@@ -21,14 +21,14 @@
         <ion-spinner name="crescent" ></ion-spinner>
     </div>
     <ion-fab top right edge>
-        <button ion-fab (click)="presentCheckbox()"><ion-icon name="funnel"></ion-icon></button>        
+        <button ion-fab (tap)="presentCheckbox()"><ion-icon name="funnel"></ion-icon></button>        
     </ion-fab>
     <h3>2017 Important Dates</h3>
 
     <ion-grid>
         <!-- cr represents the row of calendars -->
         <ion-row *ngFor="let cr of calendars">
-            <ion-col *ngFor="let cal of cr" (click)="openCal(cal)">
+            <ion-col *ngFor="let cal of cr" (tap)="openCal(cal)">
                 <h5>{{ cal.monthName }}</h5>
                 <calendar [eventSource]="cal.events" [calendarMode]="cal.mode" [currentDate]="cal.currentDate" step="30" formatDayHeader="E"></calendar>
             </ion-col>
